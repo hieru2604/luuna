@@ -2,4 +2,4 @@
 
 # first time making a react project!
 
-gonna make a figurine shop!
+making a figurine shop!
