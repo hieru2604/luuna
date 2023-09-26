@@ -2,7 +2,7 @@ const data = {
   products: [
     {
       name: 'cool mouse',
-      slug: 'nmouse slug',
+      slug: 'a mouse',
       category: '2hou',
       image: '/images/p1.png',
       price: 420,
@@ -14,7 +14,7 @@ const data = {
     },
     {
       name: 'padoru mouse',
-      slug: 'pmouse slug',
+      slug: 'b mouse',
       category: '2hou',
       image: '/images/p2.png',
       price: 69,
@@ -26,7 +26,7 @@ const data = {
     },
     {
       name: 'cool mouse',
-      slug: 'nmouse slug',
+      slug: 'c mouse',
       category: '2hou',
       image: '/images/p1.png',
       price: 420,
@@ -38,7 +38,7 @@ const data = {
     },
     {
       name: 'padoru mouse',
-      slug: 'pmouse slug',
+      slug: 'd mouse',
       category: '2hou',
       image: '/images/p2.png',
       price: 69,
