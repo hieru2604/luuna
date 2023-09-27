@@ -9,14 +9,11 @@ body {
 main {
   padding: 1rem;
 }
-header {
-  background-color: #404040;
-  padding: 1rem;
+.site-container {
+  min-height: 100vh;
 }
-header a {
-  color: #ffffff;
-  font-weight: bold;
-  text-decoration: none;
+main {
+  flex: 1;
 }
 
 .products {
