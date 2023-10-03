@@ -5,6 +5,8 @@ import loggger from 'use-reducer-logger';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Product from '../components/Products';
+import logger from 'use-reducer-logger';
+import { Helmet } from 'react-helmet-async';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -20,14 +22,11 @@ const reducer = (state, action) => {
 };
 
 function HomeScreen() {
-  const [{ loading, error, products }, dispatch] = useReducer(
-    loggger(reducer),
-    {
-      products: [],
-      loading: true,
-      error: '',
-    }
-  );
+  const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
+    products: [],
+    loading: true,
+    error: '',
+  });
 
   //const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -46,6 +45,9 @@ function HomeScreen() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <title>Luuna</title>
+      </Helmet>
       <h1>Featured mouses</h1>
       <div className="products">
         {loading ? (
