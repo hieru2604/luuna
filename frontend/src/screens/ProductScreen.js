@@ -9,6 +9,9 @@ import Bagde from 'react-bootstrap/Badge';
 import Rating from '../components/Rating';
 import Button from 'react-bootstrap/esm/Button';
 import { Helmet } from 'react-helmet-async';
+import LoadingBox from '../components/loadingBox';
+import MessageBox from '../components/MessageBox';
+import { getError } from '../utils';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -39,16 +42,16 @@ function ProductScreen() {
         const result = await axios.get(`/api/products/slug/${slug}`);
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch (err) {
-        dispatch({ type: 'FETCH_FAIL', payload: err.message });
+        dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
       }
     };
     fetchData();
   }, [slug]);
 
   return loading ? (
-    <div>Loading...</div>
+    <LoadingBox />
   ) : error ? (
-    <div>{error}</div>
+    <MessageBox variant="danger">{error} </MessageBox>
   ) : (
     <div>
       <div>
@@ -64,50 +67,50 @@ function ProductScreen() {
             <ListGroup varient="flush">
               <ListGroup.Item>
                 <Helmet>
-                  <h1>{product.name}</h1>
+                  <title>{product.name}</title>
                 </Helmet>
               </ListGroup.Item>
-              <ListGroup.item>
-                <Rating>
-                  Rating = {product.rating}
-                  numReviews = {product.numReviews}
-                </Rating>
-              </ListGroup.item>
-              <ListGroup.item>Price: ${product.price}</ListGroup.item>
-              <ListGroup.item>
+              <ListGroup.Item>
+                <Rating
+                  rating={product.rating}
+                  numReviews={product.numReviews}
+                ></Rating>
+              </ListGroup.Item>
+              <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
+              <ListGroup.Item>
                 Description:
                 <p>{product.description}</p>
-              </ListGroup.item>
+              </ListGroup.Item>
             </ListGroup>
           </Col>
           <Col md={3}>
             <Card>
               <Card.Body>
-                <ListGroup varient="flush">
-                  <ListGroup.item>
+                <ListGroup variant="flush">
+                  <ListGroup.Item>
                     <Row>
                       <Col>Price:</Col>
                       <Col>${product.price}</Col>
                     </Row>
-                  </ListGroup.item>
-                  <ListGroup.item>
+                  </ListGroup.Item>
+                  <ListGroup.Item>
                     <Row>
                       <Col>Status:</Col>
                       <Col>
-                        {product.CountInStock > 0 ? (
+                        {product.countInStock > 0 ? (
                           <Bagde bg="success">In Stock</Bagde>
                         ) : (
                           <Bagde bg="danger">Unavailable</Bagde>
                         )}
                       </Col>
                     </Row>
-                  </ListGroup.item>
-                  {product.CountInStock > 0 && (
-                    <ListGroup.item>
+                  </ListGroup.Item>
+                  {product.countInStock > 0 && (
+                    <ListGroup.Item>
                       <div className="d-grid">
-                        <Button varient="primary">Add to Cart</Button>
+                        <Button variant="primary">Add to Cart</Button>
                       </div>
-                    </ListGroup.item>
+                    </ListGroup.Item>
                   )}
                 </ListGroup>
               </Card.Body>

@@ -38,8 +38,4 @@ main {
 .product img {
   width: 100%;
   max-width: 300px;
-  transition: transform 0.7s ease-in-out;
-}
-.product img:hover {
-  transform: rotate(360deg);
 }

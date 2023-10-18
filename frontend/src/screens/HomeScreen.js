@@ -7,6 +7,8 @@ import Col from 'react-bootstrap/Col';
 import Product from '../components/Products';
 import logger from 'use-reducer-logger';
 import { Helmet } from 'react-helmet-async';
+import MessageBox from '../components/MessageBox';
+import LoadingBox from '../components/loadingBox';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -51,9 +53,9 @@ function HomeScreen() {
       <h1>Featured mouses</h1>
       <div className="products">
         {loading ? (
-          <div>loading...</div>
+          <LoadingBox />
         ) : error ? (
-          <div>{error}</div>
+          <MessageBox variant="danger">{error} </MessageBox>
         ) : (
           <Row>
             {products.map((product) => (
