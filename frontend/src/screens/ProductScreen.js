@@ -36,6 +36,7 @@ function ProductScreen() {
     error: '',
   });
 
+  //getting product header
   useEffect(() => {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
@@ -49,6 +50,7 @@ function ProductScreen() {
     fetchData();
   }, [slug]);
 
+  //adding to cart
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const addToCartHandler = () => {
     ctxDispatch({
@@ -66,7 +68,9 @@ function ProductScreen() {
         <Row>
           <Col md={6}>
             <img
-              className="img-large"
+              width="300"
+              height="400"
+              className="img-medium"
               src={product.image}
               alt={product.name}
             ></img>
