@@ -22,16 +22,18 @@ function App() {
               <LinkContainer to="/">
                 <Navbar.Brand>luuna</Navbar.Brand>
               </LinkContainer>
-              <Nav className="me-auto">
-                <Link to="/cart" className="nav-link">
-                  Cart
-                  {cart.cartItems.length > 0 && (
-                    <Badge pill bg="danger">
-                      {cart.cartItems.length}
-                    </Badge>
-                  )}
-                </Link>
-              </Nav>
+              <div className="cartHeader" align="right">
+                <Nav className="me-auto">
+                  <Link to="/cart" className="nav-link">
+                    Cart
+                    {cart.cartItems.length > 0 && (
+                      <Badge pill bg="danger">
+                        {cart.cartItems.length}
+                      </Badge>
+                    )}
+                  </Link>
+                </Nav>
+              </div>
             </Container>
           </Navbar>
         </header>
