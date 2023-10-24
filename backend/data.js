@@ -1,6 +1,7 @@
 const data = {
   products: [
     {
+      _id: '1',
       name: 'cool mouse',
       slug: 'a mouse',
       category: '2hou',
@@ -13,6 +14,7 @@ const data = {
       description: 'high quality mouse',
     },
     {
+      _id: '2',
       name: 'midoriya',
       slug: 'midoriya figurine',
       category: 'standing figure',
@@ -25,6 +27,7 @@ const data = {
       description: 'high quality product',
     },
     {
+      _id: '3',
       name: 'nezuko',
       slug: 'nezuko figurine',
       category: 'standing figure',
@@ -37,6 +40,7 @@ const data = {
       description: 'high quality product',
     },
     {
+      _id: '4',
       name: 'sephiroth',
       slug: 'sephiroth figurine',
       category: 'standing figure',

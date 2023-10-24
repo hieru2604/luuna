@@ -39,3 +39,6 @@ main {
   width: 100%;
   max-width: 300px;
 }
+.img-thumbnail {
+  height: 80px;
+}
