@@ -1,11 +1,9 @@
 //import data from '../data';
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useReducer } from 'react';
 import axios from 'axios';
-import loggger from 'use-reducer-logger';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Product from '../components/Products';
-import logger from 'use-reducer-logger';
 import { Helmet } from 'react-helmet-async';
 import MessageBox from '../components/MessageBox';
 import LoadingBox from '../components/loadingBox';
@@ -24,7 +22,7 @@ const reducer = (state, action) => {
 };
 
 function HomeScreen() {
-  const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
+  const [{ loading, error, products }, dispatch] = useReducer(reducer, {
     products: [],
     loading: true,
     error: '',
@@ -50,7 +48,7 @@ function HomeScreen() {
       <Helmet>
         <title>Luuna</title>
       </Helmet>
-      <h1>Featured mouses</h1>
+      <h1>Featured products</h1>
       <div className="products">
         {loading ? (
           <LoadingBox />
@@ -59,7 +57,7 @@ function HomeScreen() {
         ) : (
           <Row>
             {products.map((product) => (
-              <Col sm={6} md={4} lg={3} className="mb-3">
+              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
                 <Product product={product}></Product>
               </Col>
             ))}
