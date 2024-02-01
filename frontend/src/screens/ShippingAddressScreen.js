@@ -16,8 +16,8 @@ export default function ShippingAddressScreen() {
   const [fullName, setFullName] = useState(shippingAddress.fullName || '');
   const [address, setAddress] = useState(shippingAddress.address || '');
   const [city, setCity] = useState(shippingAddress.city || '');
-  const [postalcode, setPostalCode] = useState(
-    shippingAddress.postalcode || ''
+  const [postalCode, setPostalCode] = useState(
+    shippingAddress.postalCode || ''
   );
   const [country, setCountry] = useState(shippingAddress.country || '');
   useEffect(() => {
@@ -34,7 +34,7 @@ export default function ShippingAddressScreen() {
         fullName,
         address,
         city,
-        postalcode,
+        postalCode,
         country,
       },
     });
@@ -44,7 +44,7 @@ export default function ShippingAddressScreen() {
         fullName,
         address,
         city,
-        postalcode,
+        postalCode,
         country,
       })
     );
@@ -84,10 +84,10 @@ export default function ShippingAddressScreen() {
               required
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlID="postalcode">
+          <Form.Group className="mb-3" controlID="postalCode">
             <Form.Label>Postal code</Form.Label>
             <Form.Control
-              value={postalcode}
+              value={postalCode}
               onChange={(e) => setPostalCode(e.target.value)}
               required
             />
