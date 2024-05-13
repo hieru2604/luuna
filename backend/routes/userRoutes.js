@@ -28,7 +28,7 @@ userRouter.post(
 );
 
 userRouter.post(
-  '/signin',
+  '/signup',
   expressAsyncHandler(async (req, res) => {
     const newUser = new User({
       name: req.body.name,

@@ -60,7 +60,7 @@ export default function ShippingAddressScreen() {
         <h1 className="my-3">Shipping Address</h1>
 
         <Form onSubmit={submitHandler}>
-          <Form.Group className="mb-3" controlID="fullName">
+          <Form.Group className="mb-3" controlId="fullName">
             <Form.Label>Full Name</Form.Label>
             <Form.Control
               value={fullName}
@@ -68,7 +68,7 @@ export default function ShippingAddressScreen() {
               required
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlID="address">
+          <Form.Group className="mb-3" controlId="address">
             <Form.Label>Address</Form.Label>
             <Form.Control
               value={address}
@@ -76,7 +76,7 @@ export default function ShippingAddressScreen() {
               required
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlID="city">
+          <Form.Group className="mb-3" controlId="city">
             <Form.Label>City</Form.Label>
             <Form.Control
               value={city}
@@ -84,7 +84,7 @@ export default function ShippingAddressScreen() {
               required
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlID="postalCode">
+          <Form.Group className="mb-3" controlId="postalCode">
             <Form.Label>Postal code</Form.Label>
             <Form.Control
               value={postalCode}
@@ -92,7 +92,7 @@ export default function ShippingAddressScreen() {
               required
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlID="country">
+          <Form.Group className="mb-3" controlId="country">
             <Form.Label>Country</Form.Label>
             <Form.Control
               value={country}
