@@ -35,7 +35,7 @@ export default function SignInScreen() {
     }
   };
 
-  //logged in user when enter log in screen will be redirected to home
+  //logged in user are redirected to home
   useEffect(() => {
     if (userInfo) {
       navigate(redirect);
