@@ -5,6 +5,7 @@ import Rating from './Rating';
 import axios from 'axios';
 import { useContext } from 'react';
 import { Store } from '../Store';
+import './product.css';
 
 function Product(props) {
   const { product } = props;
@@ -30,12 +31,14 @@ function Product(props) {
   return (
     <Card key={product.slug}>
       <Link to={`/product/${product.slug}`}>
-        <img
-          height="330"
-          src={product.image}
-          className="card-img-top"
-          alt={product.name}
-        />
+        <div className="img-wrapper">
+          <img
+            height="330"
+            src={product.image}
+            className="card-img-top hover-zoom"
+            alt={product.name}
+          />
+        </div>
       </Link>
       <Card.Body>
         <Link to={`/product/${product.slug}`}>

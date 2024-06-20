@@ -1,0 +1,7 @@
+.img-wrapper {
+  overflow: hidden;
+}
+img.hover-zoom:hover {
+  transition: 0.5s;
+  transform: scale(1.25);
+}
