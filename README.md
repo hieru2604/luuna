@@ -2,7 +2,7 @@
 Ecommerce figure selling website using React and mongoDB
 
 ## Features
- - Login /log out
+ - Login/logout
  - Create new user account
  - Product details
  - Adding to cart
