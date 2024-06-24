@@ -13,7 +13,7 @@ Ecommerce figure selling website using React and mongoDB
  - Changing password and basic info
  - Search page
  - Sorting products
- - cute kana following your icecream on home page
+ - cute kana following your mouse on home page
 
 ![image](https://github.com/hieru2604/react-ecommerce-luuna/assets/88078435/627a5f87-6cd7-4f39-8768-b38e8868420a)
 
