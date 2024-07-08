@@ -1,18 +1,13 @@
 {
   "name": "luuna",
   "version": "1.0.0",
-  "description": "figure",
+  "description": "figurine shop",
   "main": "index.js",
   "scripts": {
     "build": "cd backend && npm install && cd ../frontend && npm install && npm run build",
     "start": "node backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hieru2604/react-ecommerce-luuna"
-  },
   "author": "",
-  "license": "ISC",
-  "homepage": ""
+  "license": "ISC"
 }
