@@ -1,19 +1,20 @@
 # ecommerce react luuna
+
 Ecommerce figure selling website using React and mongoDB
 
 ## Features
- - Login/logout
- - Create new user account
- - Product details
- - Adding to cart
- - Basic Cart functions
- - Payment system using paypal sandbox
- - Order history
- - Profile page
- - Changing password and basic info
- - Search page
- - Sorting products
- - cute kana following your mouse on home page
+
+- Login/logout
+- Create new user account
+- Product details
+- Adding to cart
+- Basic Cart functions
+- Payment system using paypal sandbox
+- Order history
+- Profile page
+- Changing password and basic info
+- Search page
+- Sorting products
 
 ![image](https://github.com/hieru2604/react-ecommerce-luuna/assets/88078435/627a5f87-6cd7-4f39-8768-b38e8868420a)
 
@@ -30,4 +31,3 @@ Ecommerce figure selling website using React and mongoDB
 ![image](https://github.com/hieru2604/react-ecommerce-luuna/assets/88078435/f6de0633-2c09-4e56-b2b0-16966c321542)
 
 ![image](https://github.com/hieru2604/react-ecommerce-luuna/assets/88078435/7e97abc8-0a6e-4317-ab29-706d1c99bcc2)
-

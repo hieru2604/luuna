@@ -7,8 +7,6 @@ import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
 import MessageBox from '../components/MessageBox';
 import LoadingBox from '../components/loadingBox';
-import './add-on-homescreen/kana.css';
-import './add-on-homescreen/kana.js';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -45,15 +43,12 @@ function HomeScreen() {
     };
     fetchData();
   }, []);
+
   return (
     <div>
       <Helmet>
         <title>Luuna</title>
       </Helmet>
-      <div id="kana">
-        <img src={require('./add-on-homescreen/kana.gif')} alt="kana.jpeg" />
-      </div>
-
       <h1>Featured products</h1>
       <div className="products">
         {loading ? (

@@ -52,7 +52,7 @@ const data = {
       brand: 'STUDIO',
       category: 'Shirt',
       description: 'high quality product',
-      price: 120,
+      price: 90,
       countInStock: 4,
       rating: 4.0,
       numReviews: 15,
